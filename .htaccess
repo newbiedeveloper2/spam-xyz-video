@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.domainadresiniz\.com
+RewriteRule (.*) https://www.domainadresiniz.com/$1 [R=301,L]
+RewriteRule ^yeni/([0-9]+)(/?)$ yeni.php?id=$1
+RewriteRule ^video/([0-9]+)/([0-9a-zA-Z-_]+)(/?)$ video.php?id=$1&baslik=$2
+RewriteRule ^([a-z0-9_-]+).xml$ $1.php [L]
+RewriteRule ^resim/([0-9]+)/([0-9a-zA-Z-_]+).jpg$ img/$1.jpg
